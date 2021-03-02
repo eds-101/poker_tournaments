@@ -1,0 +1,25 @@
+<h1> Add your new game results here </h1>
+
+<% if @winner_message %>
+  New results added
+  Winner: <%=  @winner %>
+  <a href="/"> Back to homepage </a>
+<% end %>
+
+<form action="/new_result" method="post">
+
+  <label for="date">When was this game played?</label>
+  <input type="date" name="date" />
+<br>
+  <label for="players">Enter the Players here</label>
+  <input type="text" name="players" />
+<br>
+  <label for="players">Who won?</label>
+  <input type="text" name="winner" />
+<br>
+  <label for="location">Where did you play?</label>
+  <input type="text" name="location" placeholder="Stef's House" />
+<br>
+  <input type="submit" value="Submit">
+
+</form>

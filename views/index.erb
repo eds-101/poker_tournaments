@@ -1,23 +1,9 @@
-<h1> Welcome to Chitter. </h1>
-<h2> Posted peeps: </h2>
+<h1> Poker Tracker </h1>
 
-<ul>
-<% @peeps.each do |message| %>
-  <li> <%= message %>  </li>
-<% end %>
-
-</ul>
+<h4> Results, table, etc will go here </h4>
 
 
-<h1> Post a peep below! </h1>
+<h3> Add new results here </h4>
 
-<form action='/new_peep' method='post'>
+<a href="/add_results">Add new results</a> 
 
-  <label for='name'> Enter your name:
-    <input type='text' name='username'>
-  </label>
-    <label for='peep'> Enter a peep:
-    <input type='text' name='peep' placeholder='140 chars max'>
-  </label>
-  <input type='submit' value='Post'>
-</form>

@@ -1,25 +1,26 @@
 require 'sinatra/base'
 require './lib/peeps'
 
-class Chitter < Sinatra::Base
+class PokerTracker < Sinatra::Base
   enable :sessions, :method_override
   
   before do
-    # @counter = Counter.instance
-    # p '@counter:', @counter
+
   end
 
   get '/' do
-    @peeps = Peeps.feed
     erb :index
   end
 
-  post '/new_peep' do
-    p params
-    username = params[:username]
-    peep = params[:peep]
-    Peeps.new(username: username, peep: peep)
-    redirect '/'
+  get '/add_results' do
+    @winner_message = session[:winner_message]
+    erb :add_results
+  end
+
+  post '/new_result' do
+    @winner = params[:winner]
+    session[:winner_message] = "Winner: #{@winner}"
+    redirect '/add_results'
   end
 
   run! if app_file == $0

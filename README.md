@@ -1,117 +1,62 @@
-Chitter Challenge
+Poker Tournament Project
 =================
 
-* Feel free to use Google, your notes, books, etc. but work on your own
-* If you refer to the solution of another coach or student, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit a pull request to this repo with your code by 9am Monday morning
-
-
-## How to use
-### To set up the project
-Clone this repository and then run:
-```
-bundle install
-```
-
-### To set up the database
-
-Connect to `psql` and create the `chitter` database:
-
-```
-CREATE DATABASE chitter;
-```
-
-To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
-
-### To run the Chitter app:
-
-```
-rackup -p 3000
-```
-
-To view bookmarks, navigate to `localhost:3000/chitter`
-
-### To run tests:
-
-```
-rspec
-
-
-Challenge:
--------
-
-As usual please start by forking this repo.
-
-We are going to write a small Twitter clone that will allow the users to post messages to a public stream.
+* I enjoy playing poker and I want to keep a record of the games I play in my very own Poker results application.
 
 Features:
 -------
 
 ```
-STRAIGHT UP
+Essentials
 
-As a Maker
-So that I can let people know what I am doing  
-I want to post a message (peep) to chitter
+As a User
+So that I can keep track of results from games played
+I want to be able to add a new record of Poker Match results
 
-As a maker
-So that I can see what others are saying  
-I want to see all peeps in reverse chronological order
+As a User
+So that I can understand the Poker Tournament results
+I want to be able to see who played in the tournament and what position they finished in
 
-As a Maker
-So that I can better appreciate the context of a peep
-I want to see the time at which it was made
+As a User
+So that I can understand who the best players are
+I want to be able to see a league table based on the results
 
-As a Maker
-So that I can post messages on Chitter as me
-I want to sign up for Chitter
+As a User
+So that I can search a specific tournament
+I want to give each Poker match a title and date
 
-HARDER
+As a user
+So that I can see whos making and losing money
+I want to see each players' overall money gain or loss
 
-As a Maker
-So that only I can post messages on Chitter as me
-I want to log in to Chitter
+As a user
+So that I can browse my previous entries
+I want to see a filtered list of Poker Tournaments I've played in
 
-As a Maker
-So that I can avoid others posting messages on Chitter as me
-I want to log out of Chitter
+As a user
+So that I can be flexible with my attention
+I want to switch between summarised and detailed view
 
-ADVANCED
 
-As a Maker
-So that I can stay constantly tapped in to the shouty box of Chitter
-I want to receive an email if I am tagged in a Peep
+As a user
+So that I can correct an error
+I want to be able to edit details of a Poker Tournament
+
+Extras
+
+As a user
+So that I can remember any big events or hands
+I want to be able to add a Comment to a Poker game entry
+
+As a user
+So that I can see my past big events/big hands
+I want to see associated Comments when viewing a Poker game entry
+
+
 ```
 
-Technical Approach:
------
 
-In this unit, you integrated a database into Bookmark Manager using the `PG` gem and `SQL` queries. You can continue to use this approach when building Chitter Challenge.
-
-If you'd like more technical challenge now, try using an [Object Relational Mapper](https://en.wikipedia.org/wiki/Object-relational_mapping) as the database interface.
-
-Some useful resources:
-**DataMapper**
-- [Datamapper wiki](https://en.wikipedia.org/wiki/DataMapper)
-- [Sinatra, PostgreSQL & DataMapper recipe](https://github.com/sinatra/sinatra-recipes/blob/master/databases/postgresql-datamapper.md)
-
-**Ruby Object Mapper**
-- [ROM](https://rom-rb.org/)
-
-**ActiveRecord**
-- [ActiveRecord ORM](https://guides.rubyonrails.org/active_record_basics.html)
-- [Sinatra, PostgreSQL & ActiveRecord recipe](http://recipes.sinatrarb.com/p/databases/postgresql-activerecord?#article)
-
-Notes on functionality:
-------
-
-* You don't have to be logged in to see the peeps.
-* Makers sign up to chitter with their email, password, name and a username (e.g. samm@makersacademy.com, password123, Sam Morgan, sjmog).
-* The username and email are unique.
-* Peeps (posts to chitter) have the name of the maker and their user handle.
-* Your README should indicate the technologies used, and give instructions on how to install and run the tests.
-
+-----------
 Bonus:
 -----
 

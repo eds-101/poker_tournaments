@@ -20,7 +20,7 @@ require 'rspec'
 require 'features/web_helpers'
 
 # Tell Capybara to talk to the program
-Capybara.app = Chitter
+Capybara.app = PokerTracker
 
 require 'simplecov'
 require 'simplecov-console'
