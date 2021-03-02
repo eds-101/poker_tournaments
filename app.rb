@@ -13,14 +13,20 @@ class PokerTracker < Sinatra::Base
   end
 
   get '/add_results' do
-    @winner_message = session[:winner_message]
     erb :add_results
   end
 
-  post '/new_result' do
-    @winner = params[:winner]
-    session[:winner_message] = "Winner: #{@winner}"
-    redirect '/add_results'
+  post '/add_context' do
+    session[:date] = params[:date]
+    session[:location] = params[:location]
+    session[:players_count] = params[:players_count]
+    redirect '/add_player_details'
+  end
+
+  get '/add_player_details' do
+    @players_count = session[:players_count]
+    p @date = session[:date]
+    @location = session[:location]
   end
 
   run! if app_file == $0
