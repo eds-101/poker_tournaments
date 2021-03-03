@@ -2,5 +2,29 @@
 
 <ul>
   <li> Date: <%= print @date.to_s %> </li>
+  <%# how to display date? %>
   <li> Location: <%= @location %> </li>
+  <li> Number of players: <%= @players_count %>
 </ul>
+
+Made a mistake?
+<a href="/add_context"> Go back</a>
+
+<form action="submit_results" method="post">
+  <% for i in 1..(@players_count) do %>
+    <label for="name<%= i %>"> Player <%= i %> Name: </label>
+    <input type="text" name="name<%= i %>" placeholder="James" />
+    <br>
+    <label for="name<%= i %>"> Player <%= i %> Ranking: </label>
+    <input type="text" name="ranking<%= i %>" placeholder="Enter 1 - <%= @players_count %>" />
+    <br>
+    <label for="name<%= i %>"> Player <%= i %> Rebuy? Enter value (£) or leave blank: </label>
+    <input type="number" name="rebuy_value<%= i %>" value="0" />
+    <br>
+    <label for="name<%= i %>"> Player <%= i %> Money won (£): </label>
+    <input type="text" name="money_won<%= i %>" value="0" />
+    <br>
+
+  <% end %>
+  <input type="submit" value="Finalize results">
+</form>

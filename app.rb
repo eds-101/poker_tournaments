@@ -24,9 +24,10 @@ class PokerTracker < Sinatra::Base
   end
 
   get '/add_player_details' do
-    @players_count = session[:players_count]
+    p @players_count = session[:players_count].to_i
     p @date = session[:date]
     @location = session[:location]
+    erb :add_player_details
   end
 
   run! if app_file == $0
