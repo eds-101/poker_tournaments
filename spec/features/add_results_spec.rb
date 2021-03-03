@@ -12,22 +12,22 @@ feature 'adding poker results' do
 
     fill_in 'name1', with: "Stef"
     fill_in 'ranking1', with: "3"
-    fill_in 'rebuy_value1', with: 0
+    fill_in 'rebuys', with: 0
     fill_in 'money_won1', with: 0
 
     fill_in 'name2', with: "James"
     fill_in 'ranking2', with: "1"
-    fill_in 'rebuy_value2', with: 20
+    fill_in 'rebuys', with: 1
     fill_in 'money_won2', with: 70
 
     fill_in 'name3', with: "Yas"
     fill_in 'ranking3', with: "2"
-    fill_in 'rebuy_value3', with: 0
+    fill_in 'rebuys', with: 0
     fill_in 'money_won3', with: 30
 
     fill_in 'name4', with: "Laila"
     fill_in 'ranking4', with: "4"
-    fill_in 'rebuy_value4', with: 0
+    fill_in 'rebuys', with: 0
     fill_in 'money_won4', with: 0
 
     click_button 'Finalize results'

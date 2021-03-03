@@ -30,5 +30,11 @@ class PokerTracker < Sinatra::Base
     erb :add_player_details
   end
 
+  post '/submit_results' do
+
+  end
+
+
+
   run! if app_file == $0
 end
